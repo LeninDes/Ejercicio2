@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+	
+	int numero, suma=0, iterador=0,promedio=0;
+	cout<<"Ingresa un numero: "<<endl;
+	cin>>numero;
+	
+	
+	if(numero % 2 == 0 && numero > 0){
+		
+		for(int i=1; i<=numero; i++){
+			suma = i + numero;
+			numero--;
+			iterador++;		
+		}
+		cout<<" res: "<<suma * iterador<<endl;
+	}
+	else if( numero % 2 != 0 && numero > 0 ) {
+		promedio= 1 + numero / 2;
+		for(int i=1; i<=numero; i++){ // 8 8 8 8
+		
+			suma = i + numero;
+			numero--;
+			iterador++;		
+		}
+		cout<<" res: "<<(suma * (iterador-1))+ promedio<<endl;
+	
+	} else {
+		cout<<"No puedo procesar Negativos."<<endl;
+	}
+
+	
+
+	
+	return 0;
+}
